@@ -22,6 +22,8 @@ app.use(
 
 // Set up endpoints
 app.get('/', (req, res) => res.sendStatus(200));
+app.get('/foo/bar', (req, res) => res.sendStatus(200));
+app.get('/foo/baz', (req, res) => res.sendStatus(500));
 
 // Setup router modules
 app.use('/vehicle', vehicleRoutes);
